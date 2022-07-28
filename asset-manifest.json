@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5ccaa08.css",
+    "main.js": "/static/js/main.0440d60e.js",
+    "static/media/dataMinds_imagotipo_blanco.svg": "/static/media/dataMinds_imagotipo_blanco.ca8af4ac793d489fdebbeb8604270bd9.svg",
+    "static/media/jetbrains-mono-all-400-normal.woff": "/static/media/jetbrains-mono-all-400-normal.8e08cd86133caec43c49.woff",
+    "static/media/jetbrains-mono-latin-400-normal.woff2": "/static/media/jetbrains-mono-latin-400-normal.c3a23073096fe509111c.woff2",
+    "static/media/jetbrains-mono-latin-ext-400-normal.woff2": "/static/media/jetbrains-mono-latin-ext-400-normal.fd0cdc4e99adb9f941ff.woff2",
+    "static/media/jetbrains-mono-cyrillic-400-normal.woff2": "/static/media/jetbrains-mono-cyrillic-400-normal.d17154e5ab21e9482fe1.woff2",
+    "static/media/jetbrains-mono-greek-400-normal.woff2": "/static/media/jetbrains-mono-greek-400-normal.6abf1302c85207bff19d.woff2",
+    "static/media/jetbrains-mono-vietnamese-400-normal.woff2": "/static/media/jetbrains-mono-vietnamese-400-normal.d340e22dddcd5d92a750.woff2",
+    "static/media/jetbrains-mono-cyrillic-ext-400-normal.woff2": "/static/media/jetbrains-mono-cyrillic-ext-400-normal.ca70a8edb5bb0f8600ef.woff2",
+    "index.html": "/index.html",
+    "main.a5ccaa08.css.map": "/static/css/main.a5ccaa08.css.map",
+    "main.0440d60e.js.map": "/static/js/main.0440d60e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5ccaa08.css",
+    "static/js/main.0440d60e.js"
+  ]
+}
