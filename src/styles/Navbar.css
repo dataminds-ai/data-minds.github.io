@@ -1,0 +1,11 @@
+.active-blue-700 {
+    border-bottom: 3px solid #1976d2;
+  }
+
+.active-black {
+    border-bottom: 3px solid black;
+  }
+
+.active-white {
+    border-bottom: 3px solid white;
+  }

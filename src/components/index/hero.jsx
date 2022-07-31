@@ -38,16 +38,8 @@ export default function Hero() {
         config: config.molasses,
     })
 
-    const transition_4 = useTransition(appearTitle, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: {},
-        delay: 3000,
-        config: config.molasses,
-    })
-
     return (
-        <div className="relative bg-black overflow-hidden h-full">
+        <div className="relative bg-black overflow-hidden h-full" id="home">
             <div className="max-w-7xl mx-auto h-full">
                 <div className="relative z-10 pb-8 bg-black sm:pb-16 md:pb-20 lg:max-w-2xl h-full lg:w-full lg:pb-28 xl:pb-32">
                     <svg
@@ -87,10 +79,10 @@ export default function Hero() {
                                 )}
                                 {transition_3((styles, item) => item ?
                                     <animated.div style={styles} className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                        <div className="rounded-md shadow">
+                                        <div className="shadow">
                                             <a
                                                 href="#"
-                                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 font-bold-mono"
+                                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 hover:bg-white md:py-4 md:text-lg md:px-10 font-mono"
                                             >
                                                 Comenzar
                                             </a>
