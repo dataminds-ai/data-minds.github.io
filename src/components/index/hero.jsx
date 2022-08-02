@@ -69,7 +69,7 @@ export default function Hero() {
                                 </h1>
                                 {transition_3((styles, item) => item ?
                                     <animated.div style={styles}>
-                                        <p className="mt-3 text-base text-white font-mono sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                        <p className="mt-3 text-base text-white font-montserrat sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                             En <a class="underline decoration-blue-600">Dataminds</a> combinamos ciencia de datos, mejores prácticas y tecnología para la construcción de sistemas de puntuación capaces de predecir el futuro.
                                             {/* <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-blue-700 relative inline-block mx-2">
                                                 <span class="relative text-white">Dataminds</span>
@@ -82,7 +82,7 @@ export default function Hero() {
                                         <div className="shadow">
                                             <a
                                                 href="#"
-                                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 hover:bg-white md:py-4 md:text-lg md:px-10 font-mono"
+                                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold font-montserrat rounded-full text-white bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 md:py-4 md:text-lg md:px-10 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:text-black hover:font-bold"
                                             >
                                                 Comenzar
                                             </a>

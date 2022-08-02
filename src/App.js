@@ -5,6 +5,7 @@ import { BrowserRouter, Outlet, Link as LinkRouter} from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import './styles/App.css';
 import Hero from './components/index/hero';
+import Solutions from './pages/solutions';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           {/* <Home/> */}
           <Navbar/>
           <Hero/>
+          <Solutions />
           <Contact />
         </BrowserRouter>
       </div>

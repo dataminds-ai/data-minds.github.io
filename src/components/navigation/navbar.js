@@ -58,7 +58,7 @@ function Navbar() {
                 <LinkScroll to="nosotros" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Nosotros
                 </LinkScroll>
-                <LinkScroll to="contactanos" activeClass="active-white" offset={-220} spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
+                <LinkScroll to="contactanos" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faPhone} className="mr-3" /> Contáctanos
                 </LinkScroll>
             </div>
@@ -106,7 +106,7 @@ function Navbar() {
                                 onClick={() => setMobileOpen(!mobileOpen)}
                                 className="no-underline px-2 my-2 font-medium hover:text-blue-700"
                             >
-                                <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Contáctanos
+                                <FontAwesomeIcon icon={faPhone} className="mr-3" /> Contáctanos
                             </LinkScroll>
                             {/* <Avatar
                             image="https://gustui.s3.amazonaws.com/avatar.png"
