@@ -1,6 +1,6 @@
 {
   "short_name": "Dataminds",
-  "name": "Create React App Sample",
+  "name": "Dataminds Landing Page",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "dataminds-imagotipo-blanco.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "162x90"
     },
     {
-      "src": "logo512.png",
+      "src": "dataminds-imagotipo-negro.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "162x90"
     }
   ],
   "start_url": ".",

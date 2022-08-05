@@ -1,3 +1,5 @@
+import { Link as LinkScroll} from "react-scroll";
+
 export default function SolutionCard(props) {
     return (
         <div className="max-w-xs rounded-lg shadow-xl bg-gray-900 text-white h-full">
@@ -7,7 +9,9 @@ export default function SolutionCard(props) {
                     <h2 className="text-2xl font-semibold tracking-wide">{props.name}</h2>
                     <p className="text-white">{props.description}</p>
                 </div>
-                <button type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-full bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 text-white hover:bg-blue-600 font-medium">Read more</button>
+                <LinkScroll to="contactanos" activeClass="active-white" offset={20} spy={true} smooth={true} duration={500}>
+                  <button type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-full bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 text-white hover:bg-blue-600 font-medium">Conocer más</button>
+                </LinkScroll>
             </div>
         </div>
     )

@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "react-router-dom";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
 import "../../styles/Navbar.css"
 import dataMindsImagotipoBlanco from "../../images/dataMinds_imagotipo_blanco.svg"
@@ -46,21 +45,21 @@ function Navbar() {
                 </a>
             </div>
             <div className="flex-none hidden md:flex md:justify-center md:h-full text-white md:text-md lg:text-lg">
-                <LinkScroll to="home" activeClass="active-white" offset={-250} smooth={true} spy={true} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" :"hover:text-blue-500"}`}>
+                <LinkScroll to="home" offset={-250} smooth={true} spy={true} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" :"hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faHome} className="mr-3" />Home
                 </LinkScroll>
-                <LinkScroll to="soluciones" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
+                <LinkScroll to="soluciones" offset={-20} spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faMicrochip} className="mr-3" /> Soluciones
                 </LinkScroll>
-                <LinkScroll to="metodologia" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
+                <LinkScroll to="metodologia" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faDiagramProject} className="mr-3" /> Metodología
                 </LinkScroll>
-                <LinkScroll to="nosotros" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
-                    <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Nosotros
-                </LinkScroll>
-                <LinkScroll to="contactanos" activeClass="active-white" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
+                <LinkScroll to="contactanos" offset={20} spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
                     <FontAwesomeIcon icon={faPhone} className="mr-3" /> Contáctanos
                 </LinkScroll>
+                {/* <LinkScroll to="nosotros" spy={true} smooth={true} duration={500} className={`h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out ${color ? "hover:text-black" : "hover:text-blue-500"}`}>
+                    <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Nosotros
+                </LinkScroll> */}
             </div>
             <div className="flex-1 items-center justify-end hidden md:flex">
                 {/* <Avatar
@@ -96,18 +95,18 @@ function Navbar() {
                             >
                                 <FontAwesomeIcon icon={faDiagramProject} className="mr-3" /> Metodología
                             </LinkScroll>
-                            <LinkScroll to="nosotros" smooth={true} spy={true}
-                                onClick={() => setMobileOpen(!mobileOpen)}
-                                className="no-underline px-2 my-2 font-medium hover:text-blue-700"
-                            >
-                                <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Nosotros
-                            </LinkScroll>
                             <LinkScroll to="contactanos" offset={20} smooth={true} spy={true}
                                 onClick={() => setMobileOpen(!mobileOpen)}
                                 className="no-underline px-2 my-2 font-medium hover:text-blue-700"
                             >
                                 <FontAwesomeIcon icon={faPhone} className="mr-3" /> Contáctanos
                             </LinkScroll>
+                            {/* <LinkScroll to="nosotros" smooth={true} spy={true}
+                                onClick={() => setMobileOpen(!mobileOpen)}
+                                className="no-underline px-2 my-2 font-medium hover:text-blue-700"
+                            >
+                                <FontAwesomeIcon icon={faPeopleGroup} className="mr-3" /> Nosotros
+                            </LinkScroll> */}
                             {/* <Avatar
                             image="https://gustui.s3.amazonaws.com/avatar.png"
                             status="online"

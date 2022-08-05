@@ -12,7 +12,7 @@ const features = [
 export default function Solutions() {
     return (
         <div className="bg-white" id="soluciones">
-            <div className="max-w-2xl mx-auto py-20 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+            <div className="max-w-2xl mx-auto pt-20 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                 <div>
                     {/* <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-blue-700 relative inline-block mx-2"> */}
                     <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-blue-800 before:via-blue-600 before:to-blue-400 relative inline-block mx-2">
@@ -21,7 +21,8 @@ export default function Solutions() {
 
                     <p className="mt-4 text-black font-montserrat text-lg">
                         Nuestros sistemas de puntuación han sido desarrollados utilizando técnicas estadísticas y de machine learning
-                        de vanguardia. La metodología utilizada se sostiene sobre fundamentos académicos propios del Estado del Arte.
+                        de vanguardia con la finalidad de brindar fundamento estadístico y tecnológico a las decisiones de las 
+                        instituciones financieras.
                     </p>
 
                     <dl className="mt-8 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 sm:gap-y-6 lg:gap-x-8">

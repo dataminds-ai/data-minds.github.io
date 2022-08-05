@@ -14,10 +14,10 @@ import SolutionCard from "./solution-card";
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const solutions = [
-  { id: '1', name: 'Profit Scoring', description: 'Predice la rentabilidad de las solicitudes de crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-profit-scoring.svg' },
-  { id: '2', name: 'Credit Scoring', description: 'Permite hayar la probabilidad de impago (default) de un crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-credit-scoring.svg' },
-  { id: '3', name: 'Collecting Scoring', description: 'Permite determinar la probabilidad de realizar el cobro exitoso de un crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-collecting-scoring.svg' },
-  { id: '4', name: 'Churn Scoring', description: 'Permite identificar a los socios / clientes que dejarán de consumir los servicios de una organización.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-churn-scoring.svg' },
+  { id: '1', name: 'Profit Scoring', description: 'Predice la rentabilidad de las solicitudes de crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-profit-scoring-woman.svg' },
+  { id: '2', name: 'Credit Scoring', description: 'Permite hayar la probabilidad de impago (default) de un crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-credit-scoring-man.svg' },
+  { id: '3', name: 'Collecting Scoring', description: 'Permite determinar la probabilidad de realizar el cobro exitoso de un crédito.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-collecting-scoring-man-woman.svg' },
+  { id: '4', name: 'Churn Scoring', description: 'Permite identificar a los socios / clientes que dejarán de consumir los servicios de una organización.', imageUri: 'https://objectstorage.sa-santiago-1.oraclecloud.com/n/ax8tyev2rnkq/b/bucket-webpages-objects/o/img-churn-scoring-woman.svg' },
 ]
 
 
