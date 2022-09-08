@@ -20,8 +20,8 @@ export default function Methodology() {
         </div>
         <div>
           <div className="text-right">
-            <span class="before:block before:absolute before:-inset-1 before:-skew-y--3 before:bg-gradient-to-r before:from-blue-400 before:via-blue-600 before:to-blue-800 relative inline-block mx-2">
-              <span class="relative text-white"><h2 className="text-4xl font-bold font-mono text-">.metodología</h2></span>
+            <span class="before:block before:absolute before:-inset-1 before:skew-y-2 before:bg-gradient-to-r before:from-blue-400 before:via-blue-600 before:to-blue-800 relative inline-block mx-2">
+              <span class="relative text-white"><h2 className="text-4xl font-bold font-mono">.metodología</h2></span>
             </span>
 
             <p className="mt-4 text-black font-montserrat text-lg">

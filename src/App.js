@@ -1,25 +1,18 @@
-import Navbar from './components/navigation/navbar';
-import GetContact from './pages/contact';
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './styles/App.css';
-import Hero from './components/index/hero';
-import Solutions from './pages/solutions';
-import Footer from './components/footer/footer';
-import Methodology from './components/methodology/methodology';
+import Demo from './containers/Demo';
+import Home from './containers/Home';
 
 function App() {
   return (
     <>
-      <div className="relative h-full">
-        <BrowserRouter>
-          <Navbar />
-          <Hero />
-          <Solutions />
-          <Methodology />
-          <GetContact />
-          {/* <Footer /> */}
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/demo' element={<Demo />} />
+          {/* <Route path="*" component={NotFound} /> */}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

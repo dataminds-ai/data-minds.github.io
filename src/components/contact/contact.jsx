@@ -22,7 +22,7 @@ export default function Contact(props) {
     <section className="text-black">
       <div className="grid max-w-6xl grid-cols-1 mx-auto md:grid-cols-2 md:divide-x shadow-lg sm:rounded-xl sm:overflow-hidden">
         <div className="bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 text-white px-6 lg:px-8 py-6 shadow-inner font-montserrat">
-          <h1 className="text-4xl font-bold font-mono text-black my-3">contáctanos.</h1>
+          <h1 className="text-4xl font-bold font-mono text-white my-3">contáctanos.</h1>
           <p className="pt-2 pb-4">Por favor, llene y envíe el siguiente formulario. Nuestro equipo atenderá gustosamente todas sus consultas dentro de las próximas 24 horas.</p>
           <div className="space-y-4">
             <p className="flex items-center">
