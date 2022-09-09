@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useTransition, animated, config } from "react-spring"
+import { Link as LinkScroll } from "react-scroll";
 import "@fontsource/jetbrains-mono"
 
 const navigation = [
@@ -80,12 +81,11 @@ export default function Hero() {
                 {transition_3((styles, item) => item ?
                   <animated.div style={styles} className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div className="shadow">
-                      <a
-                        href="#"
-                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold font-montserrat rounded-full text-white bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 md:py-4 md:text-lg md:px-10 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:text-black hover:font-bold"
-                      >
-                        Comenzar
-                      </a>
+                      <LinkScroll to="soluciones" activeClass="active-white" offset={20} spy={true} smooth={true} duration={500}>
+                        <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold font-montserrat rounded-full text-white bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 md:py-4 md:text-lg md:px-10 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:text-black hover:font-bold">
+                          Comenzar
+                        </a>
+                      </LinkScroll>
                     </div>
                   </animated.div> : ""
                 )}

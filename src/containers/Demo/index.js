@@ -3,14 +3,15 @@ import axios from 'axios';
 import Auth from '../../components/auth/Auth'
 import Stepper from '../../components/stepper/Stepper'
 import SwipeButton from './SwipeButton'
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Paramform from "./ParamForm";
 import Prediction from "./Prediction";
-// import '../../styles/swiper.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Demo() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -24,7 +25,7 @@ function Demo() {
   });
 
   const [paramForm, setParamForm] = useState({
-    param1: 33,
+    param1: 40,
     param2: 3000,
     param3: 12,
     param4: 5,
@@ -37,7 +38,8 @@ function Demo() {
     param11: 100
   });
 
-  const baseURL = "/api/v1/scoring";
+  // const baseURL = "/api/v1/scoring";
+  const baseURL = "https://scoring.dataminds.pe/api/v1/scoring"
 
   const handleChange = (e) => {
     switch (currentStep) {
@@ -74,11 +76,26 @@ function Demo() {
             setResponse(response.data);
             setToken(response.data.token);
             if (response.data.codigo === "00") {
+              toast.success("Successful authentication!");
               currentStep === stepsLength
                 ? setComplete(true)
                 : setCurrentStep((prev) => prev + 1);
 
               swiper.slideNext()
+            }
+          })
+          .catch((error) => {
+            if (error.response) {
+              error.response.data.codigo === "30"
+                ? toast.error("Invalid username or password or model ID")
+                : toast.error("Internal error")
+            } else if (error.request) {
+              // The request was made but no response was received
+              toast.error("Internal error")
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              toast.error("Internal error")
+              console.log('Error', error.message);
             }
           });
         break;
@@ -118,13 +135,27 @@ function Demo() {
           })
           .then((response) => {
             setResponse(response.data)
-
             if (response.data.codmensaje === "00") {
-              if (currentStep === stepsLength - 1){
+              toast.success("Successful prediction!");
+              if (currentStep === stepsLength - 1) {
                 setComplete(true)
                 setCurrentStep((prev) => prev + 1);
               }
               swiper.slideNext()
+            }
+          })
+          .catch((error) => {
+            if (error.response) {
+              error.response.data.codigo === "30"
+                ? toast.error("Invalid token, refresh the page and authenticate again.")
+                : toast.error("Internal error")
+            } else if (error.request) {
+              // The request was made but no response was received
+              toast.error("Internal error")
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              toast.error("Internal error")
+              console.log('Error', error.message);
             }
           });
         break;
@@ -138,10 +169,15 @@ function Demo() {
     }
   }
 
+  const notifySuccess = () => toast.success("Success !");
+  const notifyError = () => toast.error("Error !");
+  const notifyInfo = () => toast.info("Info !");
+  const notifyWarning = () => toast.warn("Warning !");
+
   return (
     <>
       <div className='flex flex-col h-screen'>
-        <div className='mx-auto mt-20'>
+        <div className='mx-auto mt-10 sm:mt-20'>
           <Stepper currentStep={currentStep} complete={complete} />
         </div>
         <div className='w-auto mt-10'>
@@ -165,7 +201,7 @@ function Demo() {
             <SwiperSlide>
               <div className="flex">
                 <div className="mx-auto">
-                  <Prediction handleSubmit={handleSubmit} prediction={response? response.prediccion: ""} />
+                  <Prediction handleSubmit={handleSubmit} prediction={response ? response.prediccion : ""} />
                 </div>
               </div>
             </SwiperSlide>
@@ -173,6 +209,7 @@ function Demo() {
           {/* <Auth handleClick={handleClick} currentStep={currentStep} complete={complete} /> */}
         </div>
       </div>
+      <ToastContainer />
     </>
   )
 }

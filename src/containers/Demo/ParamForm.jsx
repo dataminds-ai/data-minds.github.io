@@ -52,17 +52,24 @@ export default function Paramform({ handleSubmit, handleChange, paramForm }) {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 p-5 rounded-xl">
+      <div className="bg-gradient-to-r w-4/5 sm:w-3/4 mx-auto from-blue-800 via-blue-600 to-blue-400 p-5 rounded-xl">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0 text-white">
-              <h3 className="text-lg font-medium leading-6">Personal Information</h3>
-              <p className="mt-1 text-sm">Use a permanent address where you can receive mail.</p>
+              <h3 className="text-lg font-medium leading-6">Parameters</h3>
+              <p className="mt-1 text-sm py-2">
+                Within the fields from the age to the maximum days delinquent,
+                the data of a customer of a financial institution applying for a loan must be entered.
+              </p>
+              <p className="mt-1 text-sm py-2">
+                On the other hand, within the fields ranging from the principal to the loan product id,
+                the data of the loan the client is requesting must be entered.
+              </p>
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
             <form onSubmit={(e) => handleSubmit(e, swiper)}>
-              <div className="overflow-hidden shadow-xl sm:rounded-xl">
+              <div className="overflow-hidden shadow-xl rounded-xl">
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     {params?.map((param, i) => (
@@ -100,7 +107,7 @@ export default function Paramform({ handleSubmit, handleChange, paramForm }) {
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-gray-800 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Predict
                   </button>
@@ -110,6 +117,9 @@ export default function Paramform({ handleSubmit, handleChange, paramForm }) {
           </div>
         </div>
       </div>
+      <p className="text-center text-gray-500 text-xs my-4">
+        &copy;2022 Dataminds. All rights reserved.
+      </p>
     </>
   )
 }
