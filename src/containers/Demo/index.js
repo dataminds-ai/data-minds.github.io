@@ -9,6 +9,7 @@ import "swiper/css/effect-coverflow"
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Paramform from "./ParamForm";
+import Prediction from "./Prediction";
 // import '../../styles/swiper.css'
 
 function Demo() {
@@ -72,7 +73,7 @@ function Demo() {
           .then((response) => {
             setResponse(response.data);
             setToken(response.data.token);
-            if (response.data.codigo == "00") {
+            if (response.data.codigo === "00") {
               currentStep === stepsLength
                 ? setComplete(true)
                 : setCurrentStep((prev) => prev + 1);
@@ -116,16 +117,23 @@ function Demo() {
             }
           })
           .then((response) => {
-            if (response.data.codmensaje == "00") {
-              currentStep === stepsLength
-                ? setComplete(true)
-                : setCurrentStep((prev) => prev + 1);
+            setResponse(response.data)
 
+            if (response.data.codmensaje === "00") {
+              if (currentStep === stepsLength - 1){
+                setComplete(true)
+                setCurrentStep((prev) => prev + 1);
+              }
               swiper.slideNext()
             }
           });
         break;
       case 3:
+        if (response.codmensaje === "00") {
+          setComplete(false)
+          setCurrentStep((prev) => prev - 1);
+          swiper.slidePrev()
+        }
         break;
     }
   }
@@ -155,13 +163,10 @@ function Demo() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mx-auto">
-                Slide 3
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full">
-                Slide 4
+              <div className="flex">
+                <div className="mx-auto">
+                  <Prediction handleSubmit={handleSubmit} prediction={response? response.prediccion: ""} />
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
