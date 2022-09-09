@@ -8,7 +8,6 @@ const Stepper = ({ currentStep, complete }) => {
   // const [complete, setComplete] = useState(false);
   return (
     <>
-      {console.log( currentStep, complete)}
       <div className="flex justify-between">
         {steps?.map((step, i) => (
           <div
