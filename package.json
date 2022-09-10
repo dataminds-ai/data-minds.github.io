@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://data-minds.github.io",
   "private": true,
+  "proxy": "https://scoring.dataminds.pe",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@fontsource/jetbrains-mono": "^4.5.9",

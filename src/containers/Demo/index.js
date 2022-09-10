@@ -38,9 +38,10 @@ function Demo() {
     param11: 100
   });
 
-  // const baseURL = "/api/v1/scoring";
-  const baseURL = "https://scoring.dataminds.pe/api/v1/scoring"
-
+  // const baseURL = "https://scoring.dataminds.pe/api/v1/scoring" problema de CORS
+  // se soluciona CORS adicionando propiedad proxy en package.json (recomendado para el desarrollo)
+  const baseURL = "/api/v1/scoring";
+  
   const handleChange = (e) => {
     switch (currentStep) {
       case 1:
