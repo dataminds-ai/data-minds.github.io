@@ -17,6 +17,7 @@ function Demo() {
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
   const [token, setToken] = useState(null);
+  const [clicked, setClicked] = useState(false);
   const [response, setResponse] = useState(null);
   const [formValue, setformValue] = useState({
     username: "",
@@ -38,9 +39,9 @@ function Demo() {
     param11: 100
   });
 
-  // const baseURL = "https://scoring.dataminds.pe/api/v1/scoring" problema de CORS
-  // se soluciona CORS adicionando propiedad proxy en package.json (recomendado para el desarrollo)
-  const baseURL = "/api/v1/scoring";
+  const baseURL = "https://scoring.dataminds.pe/api/v1/scoring"
+  // se soluciona CORS adicionando propiedad proxy en package.json (para el desarrollo)
+  // const baseURL = "/api/v1/scoring";
   
   const handleChange = (e) => {
     switch (currentStep) {
@@ -61,7 +62,8 @@ function Demo() {
   }
 
   const handleSubmit = async (e, swiper) => {
-    e.preventDefault();
+    e.preventDefault()
+    setClicked(true)
 
     const stepsLength = 3
 
@@ -166,14 +168,10 @@ function Demo() {
           setCurrentStep((prev) => prev - 1);
           swiper.slidePrev()
         }
-        break;
+        break; 
     }
+    setClicked(false)
   }
-
-  const notifySuccess = () => toast.success("Success !");
-  const notifyError = () => toast.error("Error !");
-  const notifyInfo = () => toast.info("Info !");
-  const notifyWarning = () => toast.warn("Warning !");
 
   return (
     <>
@@ -188,14 +186,14 @@ function Demo() {
             <SwiperSlide>
               <div className="flex">
                 <div className="mx-auto">
-                  <Auth handleSubmit={handleSubmit} Button={SwipeButton} handleChange={handleChange} formValue={formValue} />
+                  <Auth handleSubmit={handleSubmit} Button={SwipeButton} handleChange={handleChange} formValue={formValue} clicked={clicked} />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex">
                 <div className="mx-auto">
-                  <Paramform handleSubmit={handleSubmit} handleChange={handleChange} paramForm={paramForm} />
+                  <Paramform handleSubmit={handleSubmit} handleChange={handleChange} paramForm={paramForm} clicked={clicked} />
                 </div>
               </div>
             </SwiperSlide>
